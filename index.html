@@ -1,0 +1,127 @@
+Alan Walker Cuy
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vigenère Cipher</title>
+
+    <link rel="stylesheet" href="design.css">
+</head>
+
+
+<body>
+<div class="lyrics-box">
+    <h2>Oalah Cik 😹</h2>
+
+    <div class="lyrics">
+        You were the shadow to my light
+    Did you feel us?
+    Another star, you fade away
+    Afraid our aim is out of sight
+    Wanna see us alight
+
+    [Pre-Chorus]
+    Where are you now?
+    Where are you now?
+    Where are you now?
+    Was it all in my fantasy?
+    Where are you now?
+    Were you only imaginary?
+    [Chorus]
+    Where are you now?
+    Atlantis, under the sea, under the sea
+    Where are you now? Another dream
+    The monster's running wild inside of me
+    I'm faded, I'm faded
+    So lost, I'm faded, I'm faded
+    So lost, I'm faded
+
+    [Verse 2]
+    These shallow waters never met what I needed
+    I'm letting go, a deeper dive
+    Eternal silence of the sea
+    I'm breathing, alive
+    You might also like
+    So Long, London
+    Taylor Swift
+    Family Matters
+    Drake
+    Pandemic
+    DR. CREEP
+    [Pre-Chorus]
+    Where are you now?
+    Where are you now?
+    Under the bright but faded lights
+    You set my heart on fire
+    Where are you now?
+    Where are you now?
+
+    [Chorus]
+    Where are you now?
+    Atlantis, under the sea, under the sea
+    Where are you now? Another dream
+    The monster's running wild inside of me
+    I'm faded, I'm faded
+    So lost, I'm faded, I'm faded
+    So lost, I'm faded
+    </div>
+</div>
+<div class="container">
+
+    <h1>Vigenère Cipher, Group 2</h1>
+
+    <div class="section">
+
+        <h2>Encryption</h2>
+
+        <label>Plaintext</label>
+        <input type="text" id="plaintext">
+
+        <label>Key</label>
+        <input type="text" id="encryptionKey">
+
+        <button onclick="encrypt()">Encrypt</button>
+
+        <label>Output</label>
+        <input type="text" id="ciphertextOutput" readonly>
+
+    </div>
+
+
+    <div class="section">
+
+        <h2>Decryption</h2>
+
+        <label>Ciphertext</label>
+        <input type="text" id="ciphertext">
+
+        <label>Key</label>
+        <input type="text" id="decryptionKey">
+
+        <button onclick="decrypt()">Decrypt</button>
+
+        <label>Output</label>
+        <input type="text" id="plaintextOutput" readonly>
+
+    </div>
+
+
+    <div class="section">
+
+        <h2>Explanation</h2>
+
+        <div id="explanation">
+            The result will appear here.
+        </div>
+
+    </div>
+
+</div>
+
+<script src="cipher.js"></script>
+
+</body>
+</html>
+
