@@ -5,9 +5,11 @@ function encrypt() {
 
     if (plaintext === "" || key === "") {
         document.getElementById("encryption").innerHTML = "Please enter plaintext and key.";
+        document.getElementById("ciphertextOutput").value = "";
+        document.getElementById("explanation").innerHTML = "";
         return;
     }
-    document.getElementById("decryption").innerHTML = "";
+    document.getElementById("encryption").innerHTML = "";
 
     let ciphertext = "";
     let keyIndex = 0;
@@ -49,30 +51,8 @@ function encrypt() {
         "Plaintext: " + plaintext + "<br>" +
         "Key: " + key + "<br>" +
         "Ciphertext: " + ciphertext;
-}
 
-function checkkey() {
-    let key = document.getElementById("key").value;
-    let explanation = document.getElementById("explanation").value;
-    if (key === "") {
-        document.getElementById("explanation").innerHTML ="Please Enter Key"
-        return;
-    }
-    if (key.length <= 5){
-        document.getElementById("explanation").innerHTML =
-            "Key is too weak <br><br>" +
-            "Key: " + key + "<br>" +
-            "Minimum key length > 5";
-    }
-    if (key.length > 5){
-        document.getElementById("explanation").innerHTML =
-            "Key is strong enough <br><br>" +
-            "Key: " + key + "<br>" +
-            "Minimum key length > 5"
-            return;
-    } 
 }
-    
 
 
 function decrypt() {
@@ -82,8 +62,10 @@ function decrypt() {
 
     if (ciphertext === "" || key === "") {
         document.getElementById("decryption").innerHTML = "Please enter ciphertext and key.";
+        document.getElementById("plaintextOutput").value = "";
+        document.getElementById("explanation").innerHTML = "";  
+
         return;
-        
     }
     document.getElementById("decryption").innerHTML = "";
 
@@ -127,4 +109,27 @@ function decrypt() {
         "Ciphertext: " + ciphertext + "<br>" +
         "Key: " + key + "<br>" +
         "Plaintext: " + plaintext;
+}
+
+function checkkey() {
+    let key = document.getElementById("key").value;
+    let explanation = document.getElementById("checkkey").value;
+    if (key === "") {
+        document.getElementById("checkkey").innerHTML ="Please Enter Key"
+        document.getElementById("explanation").innerHTML ="";
+        return;
+    }
+    if (key.length <= 5){
+        document.getElementById("checkkey").innerHTML =
+            "Key is too weak <br><br>" +
+            "Key: " + key + "<br>" +
+            "Minimum key length > 5";
+    }
+    if (key.length > 5){
+        document.getElementById("checkkey").innerHTML =
+            "Key is strong enough <br><br>" +
+            "Key: " + key + "<br>" +
+            "Minimum key length > 5"
+            return;
+    } 
 }
