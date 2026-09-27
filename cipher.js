@@ -7,6 +7,7 @@ function encrypt() {
         document.getElementById("encryption").innerHTML = "Please enter plaintext and key.";
         return;
     }
+    document.getElementById("decryption").innerHTML = "";
 
     let ciphertext = "";
     let keyIndex = 0;
@@ -80,9 +81,11 @@ function decrypt() {
     let key = document.getElementById("decryptionKey").value;
 
     if (ciphertext === "" || key === "") {
-        document.getElementById("decryption").innerHTML = "Please enter plaintext and key.";
+        document.getElementById("decryption").innerHTML = "Please enter ciphertext and key.";
         return;
+        
     }
+    document.getElementById("decryption").innerHTML = "";
 
     let plaintext = "";
     let keyIndex = 0;
