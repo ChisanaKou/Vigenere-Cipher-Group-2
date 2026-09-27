@@ -4,7 +4,7 @@ function encrypt() {
     let key = document.getElementById("encryptionKey").value;
 
     if (plaintext === "" || key === "") {
-        alert("Please enter plaintext and key.");
+        document.getElementById("encryption").innerHTML = "Please enter plaintext and key.";
         return;
     }
 
@@ -50,6 +50,29 @@ function encrypt() {
         "Ciphertext: " + ciphertext;
 }
 
+function checkkey() {
+    let key = document.getElementById("key").value;
+    let explanation = document.getElementById("explanation").value;
+    if (key === "") {
+        document.getElementById("explanation").innerHTML ="Please Enter Key"
+        return;
+    }
+    if (key.length <= 5){
+        document.getElementById("explanation").innerHTML =
+            "Key is too weak <br><br>" +
+            "Key: " + key + "<br>" +
+            "Minimum key length > 5";
+    }
+    if (key.length > 5){
+        document.getElementById("explanation").innerHTML =
+            "Key is strong enough <br><br>" +
+            "Key: " + key + "<br>" +
+            "Minimum key length > 5"
+            return;
+    } 
+}
+    
+
 
 function decrypt() {
 
@@ -57,7 +80,7 @@ function decrypt() {
     let key = document.getElementById("decryptionKey").value;
 
     if (ciphertext === "" || key === "") {
-        alert("Please enter ciphertext and key.");
+        document.getElementById("decryption").innerHTML = "Please enter plaintext and key.";
         return;
     }
 
