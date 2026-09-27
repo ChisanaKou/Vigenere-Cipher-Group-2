@@ -116,7 +116,6 @@ function checkkey() {
     let explanation = document.getElementById("checkkey").value;
     if (key === "") {
         document.getElementById("checkkey").innerHTML ="Please Enter Key"
-        document.getElementById("explanation").innerHTML ="";
         return;
     }
     if (key.length <= 5){
