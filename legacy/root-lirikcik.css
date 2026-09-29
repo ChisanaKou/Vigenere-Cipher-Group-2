@@ -1,0 +1,28 @@
+
+
+.lyrics-box {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+
+    width: 350px;
+    height: 500px;
+
+    background: white;
+    padding: 20px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 20px rgba(3, 193, 207, 0.15);
+
+    overflow-y: auto;
+}
+
+.lyrics-box h2 {
+    margin-top: 0;
+}
+
+.lyrics {
+    white-space: pre-line;
+    line-height: 1.6;
+}

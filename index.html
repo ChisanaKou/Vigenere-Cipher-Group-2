@@ -1,137 +1,471 @@
-Alan Walker Cuy
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Vigenère Cipher educational web project by Group 2."
+    />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vigenère Cipher</title>
+    <title>Vigenère Cipher - Group 2</title>
 
-    <link rel="stylesheet" href="lirikcik.css">
-</head>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
+  <body>
+    <!-- =========================
+         HEADER
+    ========================== -->
 
-<body>
-<div class="lyrics-box">
-    <h2>Oalah Cik 😹</h2>
+    <header class="site-header">
+      <a class="logo" href="index.html" aria-label="Go to home page">
+        <img src="assets/images/aw-logo.png" alt="Alan Walker logo" />
+      </a>
 
-    <div class="lyrics">
-        You were the shadow to my light
-    Did you feel us?
-    Another star, you fade away
-    Afraid our aim is out of sight
-    Wanna see us alight
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html" aria-current="page"> HOME </a>
 
-    [Pre-Chorus]
-    Where are you now?
-    Where are you now?
-    Where are you now?
-    Was it all in my fantasy?
-    Where are you now?
-    Were you only imaginary?
-    [Chorus]
-    Where are you now?
-    Atlantis, under the sea, under the sea
-    Where are you now? Another dream
-    The monster's running wild inside of me
-    I'm faded, I'm faded
-    So lost, I'm faded, I'm faded
-    So lost, I'm faded
+        <a href="about.html"> ABOUT </a>
+      </nav>
+    </header>
 
-    [Verse 2]
-    These shallow waters never met what I needed
-    I'm letting go, a deeper dive
-    Eternal silence of the sea
-    I'm breathing, alive
-    You might also like
-    So Long, London
-    Taylor Swift
-    Family Matters
-    Drake
-    Pandemic
-    DR. CREEP
-    [Pre-Chorus]
-    Where are you now?
-    Where are you now?
-    Under the bright but faded lights
-    You set my heart on fire
-    Where are you now?
-    Where are you now?
+    <main>
+      <!-- =========================
+             HERO SECTION
+        ========================== -->
 
-    [Chorus]
-    Where are you now?
-    Atlantis, under the sea, under the sea
-    Where are you now? Another dream
-    The monster's running wild inside of me
-    I'm faded, I'm faded
-    So lost, I'm faded, I'm faded
-    So lost, I'm faded
-    </div>
-</div>
-<div class="container">
+      <section class="intro" aria-labelledby="hero-title">
+        <img
+          class="intro-background"
+          src="assets/images/hacker.gif"
+          alt=""
+          aria-hidden="true"
+        />
 
-    <h1>Vigenère Cipher, Group 2</h1>
+        <div class="intro-content">
+          <div class="hero">
+            <!-- =========================
+                         HERO TEXT
+                    ========================== -->
 
-    <div class="section">
+            <div class="hero-text">
+              <p class="eyebrow">CLASSICAL CRYPTOGRAPHY</p>
 
-        <h2>Encryption</h2>
+              <h1 id="hero-title">
+                Vigenère<br />
+                Cipher
+              </h1>
 
-        <label>Plaintext</label>
-        <input type="text" id="plaintext">
+              <p class="description">
+                Write a message, choose a key word, and turn it into a secret
+                message. Then watch how each letter changes.
+              </p>
 
-        <label>Key</label>
-        <input type="text" id="encryptionKey">
+              <a class="hero-link" href="#calculator"> TRY THE CIPHER </a>
+            </div>
 
-        <button onclick="encrypt()">Encrypt</button>
+            <!-- =========================
+                         MUSIC / LYRICS PANEL
+                    ========================== -->
 
-        <label>Output:</label>
-        <input type="text" id="ciphertextOutput" readonly>
-    <div id="encryption">
-    </div>
+            <aside class="lyrics-box" aria-label="Music and lyrics panel">
+              <div class="lyrics-top">
+                <span class="status-dot" aria-hidden="true"></span>
 
+                <span> NOW PLAYING </span>
+              </div>
 
-    <div class="section">
+              <div class="lyrics-header">
+                <h2>FADED</h2>
 
-        <h2>Decryption</h2>
+                <p>ALAN WALKER</p>
+              </div>
 
-        <label>Ciphertext</label>
-        <input type="text" id="ciphertext">
+              <div class="lyrics-line"></div>
 
-        <label>Key</label>
-        <input type="text" id="decryptionKey">
+              <div class="lyrics">
+                <div class="lyrics-content">
+                  <p class="lyric-stanza">
+                    You were the shadow to my light<br />
+                    Did you feel us?<br />
+                    Another star, you fade away<br />
+                    Afraid our aim is out of sight<br />
+                    Wanna see us alight
+                  </p>
+                  <p class="lyric-section">Pre-Chorus</p>
+                  <p class="lyric-stanza">
+                    Where are you now?<br />
+                    Where are you now?<br />
+                    Where are you now?<br />
+                    Was it all in my fantasy?<br />
+                    Where are you now?<br />
+                    Were you only imaginary?
+                  </p>
+                  <p class="lyric-section">Chorus</p>
+                  <p class="lyric-stanza">
+                    Where are you now?<br />
+                    Atlantis, under the sea, under the sea<br />
+                    Where are you now? Another dream<br />
+                    The monster&#x27;s running wild inside of me<br />
+                    I&#x27;m faded, I&#x27;m faded<br />
+                    So lost, I&#x27;m faded, I&#x27;m faded<br />
+                    So lost, I&#x27;m faded
+                  </p>
+                  <p class="lyric-section">Verse 2</p>
+                  <p class="lyric-stanza">
+                    These shallow waters never met what I needed<br />
+                    I&#x27;m letting go, a deeper dive<br />
+                    Eternal silence of the sea<br />
+                    I&#x27;m breathing, alive<br />
+                    You might also like<br />
+                    So Long, London<br />
+                    Taylor Swift<br />
+                    Family Matters<br />
+                    Drake<br />
+                    Pandemic<br />
+                    DR. CREEP
+                  </p>
+                  <p class="lyric-section">Pre-Chorus</p>
+                  <p class="lyric-stanza">
+                    Where are you now?<br />
+                    Where are you now?<br />
+                    Under the bright but faded lights<br />
+                    You set my heart on fire<br />
+                    Where are you now?<br />
+                    Where are you now?
+                  </p>
+                  <p class="lyric-section">Chorus</p>
+                  <p class="lyric-stanza">
+                    Where are you now?<br />
+                    Atlantis, under the sea, under the sea<br />
+                    Where are you now? Another dream<br />
+                    The monster&#x27;s running wild inside of me<br />
+                    I&#x27;m faded, I&#x27;m faded<br />
+                    So lost, I&#x27;m faded, I&#x27;m faded<br />
+                    So lost, I&#x27;m faded
+                  </p>
+                </div>
+              </div>
 
-        <button onclick="decrypt()">Decrypt</button>
+              <div class="lyrics-footer">
+                <span> ● SIGNAL ACTIVE </span>
 
-        <label>Output:</label>
-        <input type="text" id="plaintextOutput" readonly>
-    <div id="decryption">
+                <span> VIGENÈRE SYSTEM </span>
+              </div>
 
-    </div>
-    <div class ="section">
-        <h2>Check Key Strenght</h2>
-        <label>Key</label>
-        <input type="text" id="key">
-        
-        <button onclick="checkkey()">check</button>
+              <div class="music-player">
+                <audio id="fadedMusic" controls preload="metadata">
+                  <source src="assets/audio/faded.mp3" type="audio/mpeg" />
 
-    <div id="checkkey">
-
-    </div>
-
-    <div class="section">
-
-        <h2>Explanation</h2>
-
-        <div id="explanation">
-            Alan Walker Cuy
+                  Your browser does not support the audio element.
+                </audio>
+              </div>
+            </aside>
+          </div>
         </div>
+      </section>
 
-    </div>
+      <!-- =========================
+             VIGENERE CALCULATOR
+        ========================== -->
 
-</div>
+      <section
+        class="calculator-section"
+        id="calculator"
+        aria-labelledby="calculator-title"
+      >
+        <div class="calculator-container">
+          <p class="calculator-label">INTERACTIVE DEMO</p>
 
-<script src="cipher.js"></script>
+          <h2 id="calculator-title">VIGENÈRE CIPHER</h2>
 
-</body>
+          <p class="calculator-description">
+            Encrypt means make a secret message. Decrypt means read it again.
+            Use the same key for both. Spaces, numbers, and symbols stay the
+            same.
+          </p>
+
+          <!-- =========================
+                     HOW TO USE / LEARN
+                ========================== -->
+
+          <section class="learning-guide" aria-labelledby="how-to-title">
+            <div class="learning-guide-header">
+              <div>
+                <p class="section-kicker">START HERE</p>
+                <h3 id="how-to-title">HOW TO USE THE CIPHER</h3>
+              </div>
+
+              <p>
+                Click LOAD EXAMPLE to try it first. Then follow the letters
+                below to see how the key changes the message.
+              </p>
+            </div>
+
+            <div class="how-to-grid">
+              <article class="how-to-card">
+                <span class="how-to-number">01</span>
+                <h4>ENTER THE TEXT</h4>
+                <p>
+                  To encrypt, enter your message. To decrypt, enter the secret
+                  message you want to read.
+                </p>
+              </article>
+
+              <article class="how-to-card">
+                <span class="how-to-number">02</span>
+                <h4>CHOOSE A KEY</h4>
+                <p>
+                  A key is a word, like <strong>LEMON</strong>, that tells each
+                  letter how far to move. Use letters only.
+                </p>
+              </article>
+
+              <article class="how-to-card">
+                <span class="how-to-number">03</span>
+                <h4>RUN THE CIPHER</h4>
+                <p>
+                  Click ENCRYPT to make it secret, or DECRYPT to read it again.
+                  To decrypt, use the key that made the secret message.
+                </p>
+              </article>
+
+              <article class="how-to-card">
+                <span class="how-to-number">04</span>
+                <h4>LEARN THE STEPS</h4>
+                <p>
+                  Click a letter below, drag the slider, or press Play. Watch
+                  the letter move one place at a time.
+                </p>
+              </article>
+            </div>
+
+            <details class="formula-guide">
+              <summary>Want to see the formulas too?</summary>
+              <div class="formula-grid">
+                <article class="formula-card-static">
+                  <span>ENCRYPTION</span>
+                  <strong>C = (P + K) mod 26</strong>
+                  <p>
+                    Move forward by the key’s number. P = message letter, K =
+                    key letter, C = secret letter.
+                  </p>
+                </article>
+
+                <article class="formula-card-static">
+                  <span>DECRYPTION</span>
+                  <strong>P = (C - K + 26) mod 26</strong>
+                  <p>
+                    Move backward by the key’s number. “mod 26” means loop
+                    around the 26 letters.
+                  </p>
+                </article>
+
+                <article class="formula-card-static alphabet-card">
+                  <span>LETTER VALUES</span>
+                  <strong>A = 0 · B = 1 · ... · Z = 25</strong>
+                  <p>
+                    A means move 0 places, B means move 1, and Z means move 25.
+                    After Z comes A.
+                  </p>
+                </article>
+              </div>
+            </details>
+          </section>
+
+          <!-- =========================
+                     ENCRYPTION & DECRYPTION
+                ========================== -->
+
+          <div class="cipher-grid">
+            <!-- ENCRYPTION -->
+
+            <section class="cipher-box" aria-labelledby="encryption-title">
+              <h3 id="encryption-title">
+                ENCRYPTION<span class="cipher-subtitle"
+                  >Make a secret message</span
+                >
+              </h3>
+
+              <label for="plaintext"> YOUR MESSAGE (PLAINTEXT) </label>
+
+              <textarea
+                id="plaintext"
+                placeholder="Enter your message..."
+              ></textarea>
+
+              <label for="encryptionKey"> KEY </label>
+
+              <input
+                type="text"
+                id="encryptionKey"
+                placeholder="Enter a key word, e.g. LEMON..."
+                autocomplete="off"
+              />
+
+              <div class="cipher-button-row">
+                <button type="button" id="encryptButton">ENCRYPT</button>
+                <button
+                  type="button"
+                  id="encryptionExampleButton"
+                  class="secondary-button"
+                >
+                  LOAD EXAMPLE
+                </button>
+              </div>
+
+              <label for="ciphertextOutput">
+                SECRET MESSAGE (CIPHERTEXT)
+              </label>
+
+              <textarea
+                id="ciphertextOutput"
+                readonly
+                placeholder="Your secret message will appear here..."
+              ></textarea>
+
+              <p
+                class="feedback"
+                id="encryptionFeedback"
+                aria-live="polite"
+              ></p>
+            </section>
+
+            <!-- DECRYPTION -->
+
+            <section class="cipher-box" aria-labelledby="decryption-title">
+              <h3 id="decryption-title">
+                DECRYPTION<span class="cipher-subtitle"
+                  >Read the secret message</span
+                >
+              </h3>
+
+              <label for="ciphertext"> SECRET MESSAGE (CIPHERTEXT) </label>
+
+              <textarea
+                id="ciphertext"
+                placeholder="Enter the secret message..."
+              ></textarea>
+
+              <label for="decryptionKey"> KEY </label>
+
+              <input
+                type="text"
+                id="decryptionKey"
+                placeholder="Enter a key word, e.g. LEMON..."
+                autocomplete="off"
+              />
+
+              <div class="cipher-button-row">
+                <button type="button" id="decryptButton">DECRYPT</button>
+                <button
+                  type="button"
+                  id="decryptionExampleButton"
+                  class="secondary-button"
+                >
+                  LOAD EXAMPLE
+                </button>
+              </div>
+
+              <label for="plaintextOutput">
+                READABLE MESSAGE (PLAINTEXT)
+              </label>
+
+              <textarea
+                id="plaintextOutput"
+                readonly
+                placeholder="Your readable message will appear here..."
+              ></textarea>
+
+              <p
+                class="feedback"
+                id="decryptionFeedback"
+                aria-live="polite"
+              ></p>
+            </section>
+          </div>
+
+          <!-- =========================
+                     KEY QUALITY CHECK
+                ========================== -->
+
+          <section
+            class="cipher-box key-checker"
+            aria-labelledby="key-checker-title"
+          >
+            <h3 id="key-checker-title">KEY QUALITY CHECK</h3>
+
+            <label for="key"> KEY </label>
+
+            <input
+              type="text"
+              id="key"
+              placeholder="Enter a key word, e.g. LEMON..."
+              autocomplete="off"
+            />
+
+            <button type="button" id="checkKeyButton">CHECK KEY</button>
+
+            <div
+              class="feedback key-feedback"
+              id="checkKeyFeedback"
+              aria-live="polite"
+            ></div>
+
+            <p class="quality-note">
+              This helps explain your key. Vigenère is for learning; use modern
+              encryption to protect real private messages.
+            </p>
+          </section>
+
+          <!-- =========================
+                     EXPLANATION
+                ========================== -->
+
+          <section class="explanation-box" aria-labelledby="explanation-title">
+            <h3 id="explanation-title">EXPLANATION</h3>
+
+            <div id="explanation" aria-live="polite">
+              Click ENCRYPT, DECRYPT, or LOAD EXAMPLE to see what happens.
+            </div>
+          </section>
+
+          <!-- =========================
+                     ALGORITHM VISUALIZATION
+                ========================== -->
+
+          <section
+            class="visualization-box"
+            id="visualization-section"
+            aria-labelledby="visualization-section-title"
+          >
+            <div class="visualization-section-header">
+              <div>
+                <p class="section-kicker">LEARN THE ALGORITHM</p>
+                <h3 id="visualization-section-title">HOW EACH LETTER MOVES</h3>
+              </div>
+
+              <p>
+                Click a message letter to explore it. Use the slider or Play to
+                watch it move. Encrypt moves forward; decrypt moves backward.
+              </p>
+            </div>
+
+            <div id="visualization">
+              <p class="visualization-empty">
+                Click LOAD EXAMPLE above to start exploring the letters.
+              </p>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script src="js/cipher.js"></script>
+  </body>
 </html>
-
